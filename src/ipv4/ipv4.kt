@@ -1,7 +1,7 @@
 package ipv4
 
 
-fun isIpCorrect(ipAddress:String):Boolean{
+fun testIpAddressValidity(ipAddress:String):Boolean{
     val parts = ipAddress.split(".")
     if (parts.size != 4) return false
 
