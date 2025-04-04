@@ -1,8 +1,8 @@
 package ipv4
 
 
-fun isIpCorrect(ip:String):Boolean{
-    val parts = ip.split(".")
+fun isIpCorrect(ipAddress:String):Boolean{
+    val parts = ipAddress.split(".")
     if (parts.size != 4) return false
 
     parts.forEach { part ->
