@@ -1,7 +1,7 @@
 # IPv4 Validation Function
 
 ## Overview
-This project contains a function `isIpCorrect(ipAddress: String): Boolean` that validates whether a given IP address is a valid IPv4 address. The function checks the format and values of the IP address.
+This project contains a function `testIpAddressValidity(ipAddress: String): Boolean` that validates whether a given IP address is a valid IPv4 address. The function checks the format and values of the IP address.
 
 ---
 
