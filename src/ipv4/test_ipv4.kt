@@ -2,6 +2,7 @@ package ipv4
 
 fun main() {
 
+    //region Empty and Basic Validation Tests
     testIpV4(
         name = "Given an empty string when call isIpCorrect then should return false",
         result = isIpCorrect(""),
@@ -14,8 +15,10 @@ fun main() {
         result = isIpCorrect("192.168.1.1"),
         expectedResult = true
     )
+    //endregion
 
 
+    //region Segment Count Tests
     testIpV4(
         name = "Given an ip address with three segments when call isIpCorrect then should return false",
         result = isIpCorrect("192.168.1"),
@@ -28,8 +31,10 @@ fun main() {
         result = isIpCorrect("192.168.1.1.1"),
         expectedResult = false
     )
+    //endregion
 
 
+    //region Dot Placement Tests
     testIpV4(
         name = "Given an ip which end with dot when call isIpCorrect then should return false",
         result = isIpCorrect("192.168.1."),
@@ -49,15 +54,19 @@ fun main() {
         result = isIpCorrect("192..168.1"),
         expectedResult = false
     )
+    //endregion
 
 
+    //region Format Tests
     testIpV4(
         name = "Given an ip which has spaces instead of dots when call isIpCorrect then should return false",
         result = isIpCorrect("192 168 1 1"),
         expectedResult = false
     )
+    //endregion
 
 
+    //region Numeric Value Tests
     testIpV4(
         name = "Given an ip has a number which out of range 0-255 when call isIpCorrect then should return false",
         result = isIpCorrect("256.168.1.1"),
@@ -76,13 +85,16 @@ fun main() {
         result = isIpCorrect("0.168.1.2"),
         expectedResult = true
     )
+    //endregion
 
 
+    //region Character Type Tests
     testIpV4(
         name = "Given an ip which has letters instead of numbers when call isIpCorrect then should return false",
         result = isIpCorrect("a.b.c.d"),
         expectedResult = false
     )
+    //endregion
 
 
 }
